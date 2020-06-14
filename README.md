@@ -26,4 +26,4 @@ When you run the above command, it generates three different results, based on o
 
 The key `London` is spelled incorrectly for scenario 3 and the function returns the default value of `nil`, which is desired.
 
-## The above function is static and does not provide a way of passing our own nested objects
+### The above function is static and does not provide a way of passing our own nested objects, but showcases an alternative approach.
