@@ -22,20 +22,14 @@ function getNestedValue(fn, defaultVal) {
 
 // Pass the key using dot notation. See the Object above for reference.
 // Returns default message "Not Found", if key path is invalid
-console.log(getNestedValue(() => testObject_1.x.y.z, "Not Found"));
+console.log(getNestedValue(() => testObject_1.x.y.z, "nil"));
 
 // Testing with another object
 console.log(
-  getNestedValue(
-    () => testObject_2.awsSeminars.nearMe.London.location,
-    "Not Found"
-  )
+  getNestedValue(() => testObject_2.awsSeminars.nearMe.London.location, "nil")
 );
 
 //Passing wrong key to ensure default message is shown -- London is spelled incorrectly
 console.log(
-  getNestedValue(
-    () => testObject_2.awsSeminars.nearMe.Londonn.location,
-    "Key Path not found"
-  )
+  getNestedValue(() => testObject_2.awsSeminars.nearMe.Londonn.location, "nil")
 );
